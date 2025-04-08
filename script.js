@@ -70,6 +70,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".fadeUpInUp");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transition =
+            "all 0.5s ease";
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0) scale(1)";
+          entry.target.style.filter = "blur(0)";
+        } else {
+          entry.target.style.transition =
+            "all 0.4s ease";
+          entry.target.style.opacity = "0";
+          entry.target.style.transform = "translateY(200px) scale(0.)";
+          entry.target.style.filter = "blur(10px)";
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".fadeUpJs, .opacity, .fadeDawnJs");
 
   const observer = new IntersectionObserver(
@@ -77,8 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show");
+          entry.target.style.opacity = "1";
         }
       });
     },

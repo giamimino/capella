@@ -546,7 +546,7 @@ header div button:nth-child(2):hover::after,
 .services-hero {
   display: flex;
   width: 100%;
-  padding: 100px 80px;
+  padding: 100px 80px 200px;
   justify-content: space-between;
   background-color: #fff;
 }
@@ -660,6 +660,226 @@ header div button:nth-child(2):hover::after,
   font-family: 'Synonym-Regular',sans-serif;
   line-height: 152%;
 }
+
+.overview-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #EFF2F7;
+  padding: 120px 80px;
+}
+
+.overview-section aside {
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+}
+
+.overview-section aside h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 69px;
+  letter-spacing: -0.1rem;
+  line-height: 111%;
+  color: #010101;
+}
+
+.overview-section aside h1 > span span {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+.overview-section aside h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+}
+
+.overviews {
+  display: flex;
+  gap: 15px;
+}
+
+.overview {
+  width: 392px;
+  height: fit-content;
+  padding: 32px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  position: relative;
+}
+
+.overview p {
+  font-family: 'Synonym-Regular';
+}
+
+.overview > div:nth-child(1) {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+.check {
+  position: absolute;
+  right: 32px;
+  bottom: 48px;
+}
+
+.user span h1 {
+  font-family: 'Synonym-Regular';
+  color: #010101;
+  font-size: 18px;
+}
+.user span p {
+  font-family: 'Synonym-Light';
+  color: #010101;
+  font-size: 15px;
+}
+
+.toggle {
+  display: flex;
+  gap: 15px;
+}
+
+.toggle button {
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all .5s ease;
+}
+
+
+.toggle button:nth-child(1) {
+  background-color: rgba(111, 0, 255, 0.1);
+  color: #6E00FF;
+}
+
+.toggle button:nth-child(2) {
+  background-color: #6E00FF;
+  color: #fff;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 32px;
+  background-color: #000;
+  padding: 100px 80px 0;
+  color: #fff;
+  font-family: 'Synonym-Light';
+}
+
+footer main {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+footer section {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+footer aside {
+  grid-column: 1 / span 2; /* ეს გააკეთებს box3-ს სიგანით 100% */
+  grid-row: 2;
+}
+
+footer main {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+footer main p {
+  display: flex;
+  flex-direction: column;
+  line-height: 152%;
+  font-size: 18px;
+}
+
+footer main img {
+  margin-bottom: 12px;
+  filter: brightness(0) invert(1);
+  width: 170px;
+}
+
+.soc {
+  display: flex;
+  gap: 16px;
+}
+
+.soc i {
+  font-size: 24px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.soc i:hover {
+  color: #6E00FF;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+footer ul li {
+  font-size: 20px;
+}
+
+footer ul li:nth-child(1) {
+  font-family: 'Synonym-Semibold';
+}
+
+footer ul li:not(:nth-child(1)) {
+  cursor: pointer;
+}
+
+footer ul li:not(:nth-child(1)):hover {
+   text-decoration: underline;
+}
+
+footer aside {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 40px 0;
+  position: relative;
+}
+
+footer aside::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #D3D3D3;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
 /* Animations */
 
 .autoBlur {
